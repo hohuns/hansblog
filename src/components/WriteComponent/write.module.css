@@ -1,0 +1,80 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.select {
+  margin-bottom: 50px;
+  padding: 10px;
+  margin-left: 50px;
+  width: max-content;
+  border: none;
+  background-color: transparent;
+  color: slateblue;
+  font-size: 23px;
+}
+
+.editor {
+  display: flex;
+  gap: 20px;
+  height: 700px;
+  position: relative;
+}
+
+.button,
+.imgContainer {
+  width: 36px;
+  height: 36px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.button:disabled {
+  background-color: rgba(220, 20, 60, 0.473);
+  cursor: not-allowed;
+}
+
+.imgContainer {
+  border-color: transparent;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.img {
+  cursor: pointer;
+  border: 3px solid slateblue;
+  border-radius: 10px;
+}
+
+.input {
+  padding: 50px;
+  font-size: 64px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--textColor);
+}
+
+.input::placeholder {
+  color: slateblue;
+}
+
+.textArea {
+  width: 100%;
+}
+
+.publish {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 10px 20px;
+  border: none;
+  background-color: slateblue;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+}
