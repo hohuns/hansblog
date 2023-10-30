@@ -3,6 +3,7 @@
 
 generator client {
   provider = "prisma-client-js"
+  previewFeatures = ["referentialActions"]
 }
 
 datasource db {
@@ -23,9 +24,7 @@ model Account {
   scope             String?
   id_token          String?
   session_state     String?
-
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
-
   @@unique([provider, providerAccountId])
 }
 
@@ -87,5 +86,5 @@ model Comment {
   userEmail String
   user      User     @relation(fields: [userEmail], references: [email])
   postSlug  String
-  post      Post     @relation(fields: [postSlug], references: [slug])
+  post      Post     @relation(fields: [postSlug], references: [slug], onDelete: Cascade)
 }
